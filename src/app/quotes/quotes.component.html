@@ -2,7 +2,11 @@
 <hr>
 
 <ul>
-    <div *ngFor='let quote of quotes;let i = index'>
+    <div *ngFor='let quote of quoted;let i = index'>
+      <p>{{quote.author|titlecase}} "{{quote.quote}}"</p>
+      <button type="button" (click)="toggleDetails(i)">View</button>
+      <button type="button" (click)="upVote(i)">Upvote</button>
+      <button type="button" (click)="downVote">Downvote</button>
         <li >{{quote.name}}</li>
         <app-quotes-details [quotes]='quotes'></app-quotes-details>
     </div>
