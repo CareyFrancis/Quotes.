@@ -16,7 +16,7 @@ export class QuotesComponent implements OnInit {
   ];
   completeQuote(isComplete, index){
     if(isComplete){
-      this.goal.splice(index,1);
+      this.quote.splice(index,1);
     }
   }
 
