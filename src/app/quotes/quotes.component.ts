@@ -13,7 +13,12 @@ export class QuotesComponent implements OnInit {
     new Quote(3,'Robert Oppenheimer','Now I am become death, the destroyer of wolrds.'),
     new Quote(4,'Albert Einstein','Imagination is more important than knowledge.'),
     new Quote(5,'Donald Trump','I would give myself an A+'),
-  ]
+  ];
+
+  toogleDetails(index){
+    this.quoted[index].showDescription = !this.quoted[index].showDescription;
+  }
+  
   constructor() { }
 
   ngOnInit() {
