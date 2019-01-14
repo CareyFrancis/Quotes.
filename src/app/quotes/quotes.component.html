@@ -1,12 +1,10 @@
-<p> {{quote.author|titlecase}} "{{quote.quote}}"</p>
-    <!-- <button type="button" (click)="toggleDetails(i)">View</button>
-    <button type="button" (click)="upVote(i)">Like</button>
-    <button type="button" (click)="downVote(i)">Dislike</button>
-    <app-quote-details *ngIf="quote.showDescription" [quote]='quote' (isComplete)='quoteComplete($event,i)'></app-quote-details>
-  </div>
-  <br>
-  <br>
+<h1>Quotes</h1>
+<hr>
 
-  <app-quotes-form (addQuote)="addNewQuotes($event)"></app-quotes-form>
-
-</div> -->
+<ul>
+    <div *ngFor='let quote of quotes;let i = index'>
+        <li >{{quote.name}}</li>
+        <app-quotes-details [quotes]='quotes'></app-quotes-details>
+    </div>
+</ul>
+<p *ngIf='quotes.length > 5'>You have too many </p>
