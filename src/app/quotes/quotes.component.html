@@ -8,7 +8,7 @@
       <button type="button" (click)="upVote(i)">Upvote</button>
       <button type="button" (click)="downVote">Downvote</button>
         <li >{{quote.name}}</li>
-        <app-quotes-details [quotes]='quotes'></app-quotes-details>
+        <app-quotes-details *ngIf="goal.showDescription"[quotes]='quotes' (isComplete)= 'completeQuote($event,i)'></app-quotes-details>
     </div>
 </ul>
 <p *ngIf='quotes.length > 5'>You have too many </p>

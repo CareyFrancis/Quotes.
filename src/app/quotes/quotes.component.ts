@@ -14,11 +14,16 @@ export class QuotesComponent implements OnInit {
     new Quote(4,'Albert Einstein','Imagination is more important than knowledge.'),
     new Quote(5,'Donald Trump','I would give myself an A+'),
   ];
+  completeQuote(isComplete, index){
+    if(isComplete){
+      this.goal.splice(index,1);
+    }
+  }
 
   toogleDetails(index){
     this.quoted[index].showDescription = !this.quoted[index].showDescription;
   }
-  
+
   constructor() { }
 
   ngOnInit() {
