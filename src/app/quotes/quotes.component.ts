@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class QuotesComponent implements OnInit {
 
-  Quotes= [
+  quotes= [
     new Quote(1,'Carey Francis', 'Learning Advanced Mathematics is easy,said no one ever!'),
     new Quote(2,'Kendrick Lamar','If God got us ,then we are going to be alright!'),
     new Quote(3,'Robert Oppenheimer','Now I am become death, the destroyer of wolrds.'),
@@ -16,7 +16,7 @@ export class QuotesComponent implements OnInit {
   ];
   completeQuote(isComplete, index){
     if(isComplete){
-      this.quote.splice(index,1);
+      this.quotes.splice(index,1);
     }
   }
 
