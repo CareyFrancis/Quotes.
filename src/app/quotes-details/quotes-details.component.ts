@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Quoute } from '../quote'
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Quote } from '../quotes'
 
 @Component({
   selector: 'app-quotes-details',
@@ -22,7 +22,7 @@ export class QuotesDetailsComponent implements OnInit {
     this.dislikeCount = this.dislikeCount +1
   }
 
-  deleteComplete(complete:boolean){
+  deleteQuote(complete:boolean){
     this.isComplete.emit(complete);
   }
 
